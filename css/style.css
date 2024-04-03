@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    color: black;
+    /* margin: 5px; */
+}
+
+nav {
+    height: 60px;
+    border: 2px solid black;
+    background-color: white;
+    justify-content: space-between;
+    padding: 0px 20px;
+    position: sticky;
+    top: 0;
+}
+
+.left {
+    height: 100vh;
+    width: 20vw;
+    border: 2px solid black;
+}
+
+.right {
+    height: 100vh;
+    width: 80vw;
+    border: 2px solid black;
+}
+
+#hero {
+    border: 2px solid red;
+}
+
+.logo {
+    width: 90px;
+}
+
+.hamburger {
+    width: 30px;
+}
+
+#search {
+    padding: 10px 30px;
+    border-radius: 20px 0px 0px 20px;
+    border: 1px solid #9f9f9f;
+    font-size: 16px;
+    width: 500px;
+    outline: none;
+}
+#search:focus{
+    border-color: blue;
+}
+.micsvg {
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    border: 1px solid #9f9f9f;
+    padding: 7px;
+}
+
+.searchsvg{
+    border: 0.5px solid #9f9f9f;
+    background-color: #f2f2f2;
+    border-radius: 0px 20px 20px 0px;
+    padding: 7.2px 25px;
+}
+/* 
+.searchContainer::after {
+    content: url('search.svg');
+    content-visibility: visible;
+    border: 0.5px solid #9f9f9f;
+    background-color: #f2f2f2;
+    border-radius: 0px 20px 20px 0px;
+    padding: 7px 30px;
+    position: absolute;
+    right: 0px;
+} */
+.searchsvg1{
+    display: none;
+}
+@media screen and (max-width:767px) {
+    nav .searchHolder,.createsvg,.micsvg{
+        display: none;
+    }
+    .left{
+        display: none;;
+    }
+    .right{
+        width: 100%;
+    }
+    .searchsvg1{
+        display: block;
+    }
+    
+}

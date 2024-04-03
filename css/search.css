@@ -1,0 +1,11 @@
+nav .searchHolder{
+    display: block;
+}
+#search {
+    padding: 10px 30px;
+    border-radius: 20px 0px 0px 20px;
+    border: 1px solid #9f9f9f;
+    font-size: 16px;
+    width: 250px;
+    outline: none;
+}

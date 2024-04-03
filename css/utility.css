@@ -1,0 +1,24 @@
+.flex{
+    display: flex;
+}
+.gap1{
+    gap: 7px;
+}
+.justifyContent{
+    justify-content: center;
+}
+.alignItems{
+    align-items: center;
+}
+.p1{
+    padding: 7px;
+}
+.gap2{
+    gap: 15px;
+}
+.gap3{
+    gap: 25px;
+}
+.div1,.div3{
+    display: none;
+}
