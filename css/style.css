@@ -16,23 +16,24 @@ nav {
     justify-content: space-between;
     padding: 0px 20px;
     position: sticky;
-    top: 0;
+    top: 0; 
 }
 
 .left {
     height: 100vh;
     width: 20vw;
     border: 2px solid black;
+    background-color: red;
 }
 
 .right {
-    height: 100vh;
+    height: 100%;
     width: 80vw;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 #hero {
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .logo {
@@ -51,9 +52,11 @@ nav {
     width: 500px;
     outline: none;
 }
-#search:focus{
+
+#search:focus {
     border-color: blue;
 }
+
 .micsvg {
     border-radius: 50%;
     background-color: #f2f2f2;
@@ -61,12 +64,13 @@ nav {
     padding: 7px;
 }
 
-.searchsvg{
+.searchsvg {
     border: 0.5px solid #9f9f9f;
     background-color: #f2f2f2;
     border-radius: 0px 20px 20px 0px;
     padding: 7.2px 25px;
 }
+
 /* 
 .searchContainer::after {
     content: url('search.svg');
@@ -78,21 +82,84 @@ nav {
     position: absolute;
     right: 0px;
 } */
-.searchsvg1{
+.searchsvg1 {
     display: none;
 }
+.close{
+    float: right;
+    position: relative;
+    top: 10px;
+    right: 10px;
+    display: none;
+}
+.right{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px 20px;
+    padding: 15px 20px;
+}
+.video{
+    /* border: 2px solid black; */
+    height: 310px;
+    width: 100%;
+}
+.video video{
+    width: 100%;
+    /* height: 100%; */
+    /* height: 2400px; */
+    object-fit: contain;
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+.video video:hover{
+    border-radius: 0px;
+}
+.title{
+    padding: 0;
+    font-size: 15px;
+}
+.creatorlogo{
+    width: 40px;
+    height: 40px;
+}
+.mainplay{
+    padding: 0px 5px;
+}
+.about{
+    gap: 2px;
+}
 @media screen and (max-width:767px) {
-    nav .searchHolder,.createsvg,.micsvg{
+
+    nav .searchHolder,
+    .createsvg,
+    .micsvg {
         display: none;
     }
-    .left{
-        display: none;;
-    }
-    .right{
+    .nav{
         width: 100%;
+        /* position: static; */
     }
-    .searchsvg1{
+    .left {
+        /* background-color: red; */
+        position: fixed;
+        top: 0px;
+        left: -120%;
+        transition: all 0.5s;
+        height: 100%;
+        z-index: 1;
+        width: 170px;
+        
+    }
+
+    .right {
+        width: 100vw;
+       gap: 0px;
+    }
+
+    .searchsvg1,.close {
         display: block;
     }
-    
+    .right{
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,6 +1,6 @@
-let searchsvg1 = document.querySelector(".searchsvg1");
-
-searchsvg1.addEventListener("click", (event) => {
-    event.preventDefault();
-    window.location.href = "search.html";
-});
+document.querySelector(".hamburger").addEventListener("click",()=>{
+    document.querySelector(".left").style.left = 0;
+})
+document.querySelector(".close").addEventListener("click",()=>{
+    document.querySelector(".left").style.left = `-120%` ;
+})
