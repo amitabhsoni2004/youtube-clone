@@ -41,3 +41,8 @@
 .fontsize1{
     font-size: 11px;
 }
+@media screen and (max-width:767px) {
+    .p1{
+        padding: 0;
+    }
+}
