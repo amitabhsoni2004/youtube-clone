@@ -194,7 +194,7 @@ iframe html body .ytp-chrome-top ,.ytp-show-cards-title{
 
     .right {
         width: 100vw;
-        gap: 10px;
+        gap: 30px;
         grid-template-columns: 1fr;
         padding: 15px 0px;
     }
