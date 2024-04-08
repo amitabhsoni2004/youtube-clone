@@ -160,6 +160,7 @@ nav {
 .right {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    place-content: center;
     gap: 40px 20px;
     padding: 15px 20px;
 }
