@@ -228,6 +228,9 @@ iframe html body .ytp-chrome-top ,.ytp-show-cards-title{
     .right {
         grid-template-columns: 1fr 1fr ;
     }
+    .scrollbar::-webkit-scrollbar {
+        display: none !important;
+    }
 }
 @media screen and (max-width:767px) {
 
@@ -299,8 +302,6 @@ iframe html body .ytp-chrome-top ,.ytp-show-cards-title{
         display: block;
         padding: 5px 11px;
     }
-    .scrollbar::-webkit-scrollbar {
-        width: 0px;
-    }
+    
 }
 
