@@ -153,7 +153,7 @@ nav {
     float: right;
     position: relative;
     top: -25px;
-    right: 10px;
+    right: 5px;
     display: none;
 }
 
@@ -224,6 +224,8 @@ iframe html body .ytp-chrome-top ,.ytp-show-cards-title{
 /* .pointer:hover{
     fill: black;
 } */
+
+
 @media screen and (max-width:1200px) {
     .right {
         grid-template-columns: 1fr 1fr ;
