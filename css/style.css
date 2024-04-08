@@ -11,7 +11,7 @@ body {
 
 nav {
     height: 60px;
-    border: 2px solid black;
+    border: 1px solid rgb(102, 99, 99);
     background-color: white;
     justify-content: space-between;
     padding: 0px 20px;
@@ -21,15 +21,70 @@ nav {
 }
 
 .left {
-    height: 100vh;
-    width: 20vw;
-    border: 2px solid black;
-    background-color: red;
+    max-height: 130vh;
+    width: 15vw;
+    /* border: 2px solid black; */
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    position: relative; 
+    background-color: white;
+}
+
+.scrollbar {
+    overflow-y: auto; 
+    width: 100%;
+    height: 100%;
+}
+
+
+.scrollbar::-webkit-scrollbar {
+    display: none; 
+}
+
+.scrollbar:hover::-webkit-scrollbar {
+    display: block; 
+    width: 8px; 
+    background-color: #f4e7e7;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: transparent; 
+    border-radius: 8px;
+}
+
+.scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: #545252; 
+    border-radius: 8px; 
+    height: 20px; 
+}
+
+.logos img{
+    /* width: 30px; */
+    height: 30px;
+}
+.logos{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    width: 100%;
+}
+.logos span{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+   gap: 20px;
+   padding: 10px;
+   border-radius: 15px;
+   cursor: pointer;
+}
+.logos span:hover{
+    background-color: #f2f2f2;
 }
 
 .right {
     height: 100%;
-    width: 80vw;
+    width: 85vw;
     /* border: 2px solid black; */
 }
 
@@ -40,9 +95,16 @@ nav {
 .logo {
     width: 90px;
 }
+.logo1 {
+    width: 90px;
+    display: none;
+}
 
 .hamburger {
     width: 30px;
+}
+.hamburger1 {
+    display: none;
 }
 
 #search {
@@ -69,7 +131,7 @@ nav {
     border: 0.5px solid #9f9f9f;
     background-color: #f2f2f2;
     border-radius: 0px 20px 20px 0px;
-    padding: 7.2px 25px;
+    padding: 8.8px 25px;
 }
 
 /* 
@@ -90,8 +152,8 @@ nav {
 .close {
     float: right;
     position: relative;
-    top: 10px;
-    right: 10px;
+    top: -25px;
+    right: 1px;
     display: none;
 }
 
@@ -129,6 +191,7 @@ iframe:hover {
 .creatorlogo {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
 }
 
 .mainplay {
@@ -158,6 +221,9 @@ iframe html body .ytp-chrome-top ,.ytp-show-cards-title{
 .videoFrame{
     height:212px;
 }
+/* .pointer:hover{
+    fill: black;
+} */
 @media screen and (max-width:1200px) {
     .right {
         grid-template-columns: 1fr 1fr ;
@@ -176,7 +242,7 @@ iframe html body .ytp-chrome-top ,.ytp-show-cards-title{
     }
 
     nav {
-        position: static;
+        /* position: static; */
 
     }
 
@@ -189,6 +255,7 @@ iframe html body .ytp-chrome-top ,.ytp-show-cards-title{
         height: 100%;
         z-index: 1;
         width: 170px;
+        border: 1px solid rgb(138, 137, 137);
 
     }
 
@@ -221,6 +288,19 @@ iframe html body .ytp-chrome-top ,.ytp-show-cards-title{
         left: -6px;
         font-size: 25px;
     }
-   
+    .hamburger1 {
+        display: block;
+        width: 30px;
+    }
+    .hamburger {
+        display: none;
+    }
+    .logo1 {
+        display: block;
+        padding: 5px 11px;
+    }
+    .scrollbar::-webkit-scrollbar {
+        width: 0px;
+    }
 }
 
