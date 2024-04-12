@@ -28,14 +28,16 @@ document.querySelector(".hamburger").addEventListener("click", () => {
         if (paragraphs[i].style.display === "none") {
             paragraphs[i].style.display = "block";
             document.querySelector(".left").style.width=`15vw`
-            document.querySelector(".left").style.border = "none"
+            document.querySelector(".left").style.border = "none";
+            document.querySelector(".catagory").style.width=`84.5%`;
             videoFrame.forEach((e)=>{
                 e.style.height=`215px`
-               })
+            })
         } else {
             paragraphs[i].style.display = "none";
             document.querySelector(".left").style.width=`3.5%`
             document.querySelector(".right").style.width=`96.5%`
+            document.querySelector(".catagory").style.width=`94.5%`;
            videoFrame.forEach((e)=>{
             e.style.height=`240px`
            })
@@ -55,17 +57,66 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     }
 });
 
+let arrayOfCategory = [
+    'All',
+    'Coding',
+    'Technology',
+    'WebDev',
+    'Programming',
+    'Software',
+    'Hardware',
+    'Web Design',
+    'Mobile Apps',
+    'Data Science',
+    'Artificial Intelligence',
+    'Machine Learning',
+    'Cybersecurity',
+    'Networking',
+    'Cloud Computing',
+    'IOT',
+    'Blockchain',
+    'eCommerce',
+    'Social Media',
+    'Digital Marketing',
+    'Graphic Design',
+    'Animation',
+    'Video Production',
+    'Photography',
+    'Music',
+    'Film',
+    'Literature',
+    'History',
+    'Politics',
+    'Science',
+    'Philosophy',
+    'Spirituality',
+    'Sports',
+    'New Video'
+];
 
+let categoriesDiv = document.getElementById("catagories"); // Note the spelling to match your HTML ID
+categoriesDiv.innerHTML = ''; // Clear the initial content
 
-// let createsvg = document.querySelector(".createsvg");
-// createsvg.addEventListener("click",()=>{
-//     createsvg.style.filter = "invert(100%)";
-// })
-// let account = document.querySelector(".account");
-// account.addEventListener("click",()=>{
-//     account.style.filter = "invert(100%)";
-// })
-// let searchsvg1 = document.querySelector(".searchsvg1");
-// searchsvg1.addEventListener("click",()=>{
-//     searchsvg1.style.filter = "invert(100%)";
-// })
+arrayOfCategory.forEach(category => {
+    let categorySpan = document.createElement("span"); // Create a new span element
+    categorySpan.textContent = category; // Set the text content to the category name
+    categoriesDiv.appendChild(categorySpan); // Append the span to the div
+});
+// for (const key of arrayOfCategory) {
+//     console.log(key)  
+// }
+let scrollAmount = 105; // Adjust this based on your actual needs
+
+document.querySelector(".previous").addEventListener("click", () => {
+    categoriesDiv.scrollBy({
+        left: -scrollAmount, // Scrolls to the left by scrollAmount
+        behavior: 'smooth'  // Ensures the scroll motion is smooth
+    });
+});
+
+document.querySelector(".next").addEventListener("click", () => {
+    categoriesDiv.scrollBy({
+        left: scrollAmount, // Scrolls to the right by scrollAmount
+        behavior: 'smooth' // Ensures the scroll motion is smooth
+    });
+});

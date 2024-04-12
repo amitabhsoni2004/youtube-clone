@@ -45,6 +45,9 @@
     .p1{
         padding: 0;
     }
+    .none{
+        display: none !important;
+    }
 }
 .creatorlogo1{
     width: 30px;
@@ -86,3 +89,23 @@ body>div{
     }
 }
 
+#sqrx-content-container{
+    height: 0px;
+}
+
+.right::-webkit-scrollbar {
+    display: block;
+    width: 5px;
+    background-color: #f4e7e7;
+}
+
+.right::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.right:hover::-webkit-scrollbar-thumb {
+    background-color: #545252;
+    border-radius: 5px;
+    height: 20px;
+}
