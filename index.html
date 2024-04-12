@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="css/utility.css">
     <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/5bb413e3/img/favicon_48x48.png"
         type="image/x-icon">
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 
 </head>
-
 <body>
 
     <div id="loader" class="loader">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1465px-YouTube_full-color_icon_%282017%29.svg.png"
-            alt="">
+        
+        <dotlottie-player src="https://lottie.host/8bfeecaa-78e0-4f98-b2ef-c3ac9928f604/GI54z0o8We.json" background="transparent" speed="1" style="width: 190px; height: 190px;" loop autoplay></dotlottie-player>
     </div>
     <nav class="flex alignItems hiddenOnLoad">
         <div class="flex gap2 alignItems">
@@ -330,7 +330,7 @@
                     </div>
                 </div>
             </div>
-            <div class="video flex column gap2">
+            <!-- <div class="video flex column gap2">
                 <iframe src="https://www.youtube.com/embed/_7IR39vOKfU?si=OsAmN5izPL38A57G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="videoFrame"></iframe>
 
                 <div class="mainplay flex row gap2">
@@ -497,7 +497,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
     </main>
     <footer class="hiddenOnLoad">
